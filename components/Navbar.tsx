@@ -1,7 +1,6 @@
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import clsx from 'clsx'
-import { Fragment } from 'react'
 
 const user = {
   name: 'Tom Cook',

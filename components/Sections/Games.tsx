@@ -1,6 +1,9 @@
 import { SparklesIcon } from '@heroicons/react/solid'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function Games() {
+  const { t } = useTranslation('common')
+
   return (
     <div className="relative overflow-hidden bg-secondary pt-16 pb-32">
       <div className="mt-24">
@@ -18,20 +21,16 @@ export default function Games() {
             <div>
               <div className="mt-6">
                 <h2 className="text-3xl font-bold tracking-tight text-white drop-shadow-md">
-                  Better understand your customers
+                  {t('games.title')}
                 </h2>
-                <p className="mt-4 text-lg text-white">
-                  Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis
-                  bibendum malesuada faucibus lacinia porttitor. Pulvinar
-                  laoreet sagittis viverra duis. In venenatis sem arcu pretium
-                  pharetra at. Lectus viverra dui tellus ornare pharetra.
-                </p>
+                <p className="mt-4 text-lg text-white">{t('games.sub')}</p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href="https://www.mechinfinity.com"
+                    target={'_blank'}
                     className="inline-flex rounded-3xl border border-transparent bg-primary px-6 py-2 text-base font-medium text-white shadow-md hover:bg-secondary"
                   >
-                    Get started
+                    Mech Infinity
                   </a>
                 </div>
               </div>
