@@ -1,0 +1,153 @@
+
+image: docker:19.03.1
+
+services:
+  - docker:19.03.1-dind
+  
+variables:
+  # Use TLS https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#tls-enabled
+  DOCKER_HOST: tcp://docker:2376
+  DOCKER_TLS_CERTDIR: "/certs"
+  DOCKER_DRIVER: overlay2
+
+
+
+stages:
+  - build
+  - deploy
+
+
+
+
+
+.utils_functions: &utils_functions | 
+  function git_describe() {
+      git --version &> /dev/null
+  
+      if [ $? != 0 ]
+      then
+        (apk update && apk add git) &> /dev/null || true
+        (apt update && apt install -y git) &> /dev/null || true
+      fi
+  
+      TAG_COMMIT=`git rev-list --abbrev-commit --tags --max-count=1`
+      COMMIT=`git rev-parse --short HEAD`
+      TAG=`git describe --abbrev=0 --tags "$TAG_COMMIT" 2>/dev/null || true`
+      DATE=`date +"%Y%m%d-%H%M%S"`
+  
+      if [ "$TAG" == "" ]
+      then
+        if [ -z "$FROM_CONFIG_REPO" ]
+        then
+          echo "$DATE"
+        else
+          echo "$DATE-ci-$FROM_CONFIG_REPO"
+        fi
+        return 0
+      fi
+  
+      if [ "$COMMIT" != "$TAG_COMMIT" ]
+      then
+        if [ -z "$FROM_CONFIG_REPO" ]
+        then
+          echo "$TAG-next-$DATE"
+        else
+          echo "$TAG-next-$DATE-ci-$FROM_CONFIG_REPO"
+        fi
+        return 0
+      fi
+  
+      git status --porcelain &> /dev/null
+  
+      if [ $? == 0 ]
+      then
+        if [ -z "$FROM_CONFIG_REPO" ]
+        then
+          echo "$TAG"
+        else
+          echo "$TAG-ci-$FROM_CONFIG_REPO"
+        fi
+      else
+        if [ -z "$FROM_CONFIG_REPO" ]
+        then
+          echo "$TAG-dirty"
+        else
+          echo "$TAG-dirty-ci-$FROM_CONFIG_REPO"
+        fi
+      fi
+  
+      return 0
+  }
+  
+  
+  
+  
+  function upgrade_deploy_dev() {
+      echo "Upgrade Deploy Dev"
+  
+      }
+  
+  
+  function deploy_to_kubernetes() {
+    export VERSION=$(git_describe)
+    
+  }
+  
+  function deploy_to_kubernetes_dev() {
+    export VERSION=$(git_describe)
+    
+    upgrade_deploy_dev
+    
+  }
+  
+
+
+before_script:
+  - *utils_functions
+
+
+
+
+
+
+build_dev:
+  stage: build
+  script:
+    - echo "CkZST00gbm9kZToxNi1idWxsc2V5ZS1zbGltCgpXT1JLRElSIC9hcHAKQ09QWSBwYWNrYWdlLmpzb24geWFybi5sb2NrIC4vClJVTiB5YXJuCkNPUFkgLi8gLgoKClJVTiBpZiBbIC1mIC5lbnYuZGV2IF07IHRoZW4gY3AgLWYgLmVudi5kZXYgLmVudi5sb2NhbDsgZmkKCgpSVU4geWFybiBidWlsZApDTUQgWyJ5YXJuIiwgInN0YXJ0Il0K" | base64 -d > Dockerfile
+    - VERSION=$(git_describe)
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CI_REGISTRY_IMAGE/dev:latest || true
+    - docker build --cache-from $CI_REGISTRY_IMAGE/dev:latest --tag $CI_REGISTRY_IMAGE/dev:latest --tag $CI_REGISTRY_IMAGE/dev:$VERSION .
+    - docker push $CI_REGISTRY_IMAGE/dev:$VERSION
+    - docker push $CI_REGISTRY_IMAGE/dev:latest
+  only:
+    - develop
+
+build_staging:
+  stage: build
+  script:
+    - echo "CkZST00gbm9kZToxNi1idWxsc2V5ZS1zbGltCgpXT1JLRElSIC9hcHAKQ09QWSBwYWNrYWdlLmpzb24geWFybi5sb2NrIC4vClJVTiB5YXJuCkNPUFkgLi8gLgoKClJVTiBpZiBbIC1mIC5lbnYuc3RhZ2luZyBdOyB0aGVuIGNwIC1mIC5lbnYuc3RhZ2luZyAuZW52LmxvY2FsOyBmaQoKClJVTiB5YXJuIGJ1aWxkCkNNRCBbInlhcm4iLCAic3RhcnQiXQo=" | base64 -d > Dockerfile
+    - VERSION=$(git_describe)
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CI_REGISTRY_IMAGE/staging:latest || true
+    - docker build --cache-from $CI_REGISTRY_IMAGE/staging:latest --tag $CI_REGISTRY_IMAGE/staging:latest --tag $CI_REGISTRY_IMAGE/staging:$VERSION .
+    - docker push $CI_REGISTRY_IMAGE/staging:$VERSION
+    - docker push $CI_REGISTRY_IMAGE/staging:latest
+  only:
+    - staging
+
+
+
+
+
+
+deploy_dev:
+  stage: deploy
+  image: lfdominguez/curl-git
+  cache: {}
+  script:
+    - deploy_to_kubernetes_dev
+  only:
+    - develop
+  dependencies:
+    - build_dev

@@ -1,0 +1,26 @@
+{
+  "heading": {
+    "art": "Art",
+    "creativity": "Creativity",
+    "entertainment": "Entertainment",
+    "sub": "Every person has dreams, we can help you to fulfill yours working with us"
+  },
+  "culture": {
+    "title": "Our Culture",
+    "sub": "Make a videogame in which users are real owners of their assets, are rewarded for their effort and time spent playing the game"
+  },
+  "premises": {
+    "title": "Premises",
+    "text1": "First and foremost a videogame should be fun and enjoyable",
+    "text2": "The balance in blockchain videogame economics must be meticulously careful",
+    "text3": "We believe that eSports are and will be the driving force in the industry and thats why our videogames are design to be highly competitive"
+  },
+  "games": {
+    "title": "Games",
+    "sub": "We have several videogames but we are focused on working on Mech Infinity, a Battle Royale within the Axie Infinity universe"
+  },
+  "team": {
+    "title": "Equipo",
+    "sub": "The best games come from the best teams"
+  }
+}
