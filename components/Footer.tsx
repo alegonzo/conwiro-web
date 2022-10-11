@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+import Link from 'next/link'
 import { ROUTES } from '../lib/constants'
 import { GAMES } from '../lib/data'
 
@@ -74,15 +75,15 @@ export default function Footer() {
 
             <div className="flex space-x-6">
               {SOCIAL.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  className="text-white hover:text-secondary"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                <Link key={item.name} href={item.href}>
+                  <a
+                    target="_blank"
+                    className="text-white hover:text-secondary"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -91,21 +92,19 @@ export default function Footer() {
             <div className="md:mt-0">
               <ul role="list" className="mt-4 space-y-4">
                 <li>
-                  <a
-                    href={'https://mechinfinity.com'}
-                    className="text-base text-white hover:text-secondary"
-                  >
-                    Mech Infinity
-                  </a>
+                  <Link href={'https://mechinfinity.com'}>
+                    <a className="text-base text-white hover:text-secondary">
+                      Mech Infinity
+                    </a>
+                  </Link>
                 </li>
                 {GAMES.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.link}
-                      className="text-base text-white hover:text-secondary"
-                    >
-                      {item.name}
-                    </a>
+                    <Link href={item.link}>
+                      <a className="text-base text-white hover:text-secondary">
+                        {item.name}
+                      </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -115,12 +114,11 @@ export default function Footer() {
               <ul role="list" className="mt-4 space-y-4">
                 {ROUTES.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-base text-white hover:text-secondary"
-                    >
-                      {t(`routes.${item.name}`)}
-                    </a>
+                    <Link href={item.href}>
+                      <a className="text-base text-white hover:text-secondary">
+                        {t(`routes.${item.name}`)}
+                      </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
