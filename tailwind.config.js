@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: 'rgba(231,70,5, 0.9)',
         secondary: 'rgb(51,103,239)',
+        footer: 'rgb(24,27,39)',
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

@@ -1,4 +1,5 @@
 {
+  "contact": "Contact Us",
   "heading": {
     "art": "Art",
     "creativity": "Creativity",
@@ -11,6 +12,9 @@
   },
   "premises": {
     "title": "Premises",
+    "title1": "Games",
+    "title2": "Economy",
+    "title3": "Competitive",
     "text1": "First and foremost a videogame should be fun and enjoyable",
     "text2": "The balance in blockchain videogame economics must be meticulously careful",
     "text3": "We believe that eSports are and will be the driving force in the industry and thats why our videogames are design to be highly competitive"
@@ -22,5 +26,13 @@
   "team": {
     "title": "Team",
     "sub": "The best games come from the best teams"
+  },
+  "routes": {
+    "home": "Home",
+    "team": "Team",
+    "news": "News"
+  },
+  "news": {
+    "title": "News"
   }
 }
