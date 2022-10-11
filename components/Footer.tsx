@@ -1,5 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import { ROUTES } from '../lib/constants'
+import { GAMES } from '../lib/data'
 
 const SOCIAL = [
   {
@@ -86,24 +87,32 @@ export default function Footer() {
             </div>
           </div>
           <div></div>
-          <div className="mt-12 grid grid-cols-2 gap-4 xl:mt-0">
-            {/*<div className="sm:hidden md:mt-0">
+          <div className="grid grid-cols-2 gap-4 xl:mt-0">
+            <div className="md:mt-0">
               <ul role="list" className="mt-4 space-y-4">
-                  {ROUTES.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-white hover:text-secondary"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                  </ul>
-            </div>*/}
+                <li>
+                  <a
+                    href={'https://mechinfinity.com'}
+                    className="text-base text-white hover:text-secondary"
+                  >
+                    Mech Infinity
+                  </a>
+                </li>
+                {GAMES.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.link}
+                      className="text-base text-white hover:text-secondary"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div>
-              <ul role="list" className="space-y-4">
+              <ul role="list" className="mt-4 space-y-4">
                 {ROUTES.map((item) => (
                   <li key={item.name}>
                     <a

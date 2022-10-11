@@ -1,6 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import Head from 'next/head'
 import Image from 'next/image'
+import GamesGrid from '../components/Games/GamesGrid'
 import Culture from '../components/Sections/Culture'
 import Games from '../components/Sections/Games'
 import Heading from '../components/Sections/Heading'
@@ -24,6 +25,8 @@ const Home = () => {
       <Premises />
 
       <Games />
+
+      <GamesGrid />
 
       <TeamGrid />
     </div>

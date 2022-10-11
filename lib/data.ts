@@ -196,3 +196,83 @@ export const NEWS = [
     link: 'https://www.diariolasamericas.com/tecnologia/emprendedores-cubanos-esperan-un-punto-inflexion-internet-crecer-n4122011',
   },
 ]
+
+export const GAMES = [
+  {
+    id: 'lapira',
+    name: 'La Pira',
+    poster: '/posters/LaPira.png',
+    mainImage: '/lapira/lapira-carro.png',
+    logo: '/lapira/la-pira.png',
+    link: '/games/lapira',
+    bg: '/lapira/lapira-bg.png',
+    gallery: [
+      '/lapira/lapira01.png',
+      '/lapira/lapira02.png',
+      '/lapira/lapira03.png',
+      '/lapira/lapira04.png',
+    ],
+    description: {
+      en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+      es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+    },
+  },
+  {
+    id: 'xtellar',
+    name: 'X-Tellar',
+    poster: '/posters/Xtellar.jpg',
+    mainImage: '/xtellar/xtellar-conwiro-poster.png',
+    logo: '/xtellar/x-tellar.png',
+    link: '/games/xtellar',
+    bg: '/xtellar/bg.png',
+    gallery: [
+      '/xtellar/xtellar-conwiro1.jpg',
+      '/xtellar/xtellar-conwiro2.jpg',
+      '/xtellar/xtellar-conwiro3.jpg',
+      '/xtellar/xtellar-conwiro4.jpg',
+    ],
+    description: {
+      en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+      es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+    },
+  },
+  {
+    id: 'squlp',
+    name: 'Squlp',
+    poster: '/posters/Squlp.jpg',
+    mainImage: '/squlp/logo.png',
+    logo: '/squlp/logo2.png',
+    link: '/games/squlp',
+    bg: '/squlp/bg.png',
+    description: {
+      en: 'In this game Art and Technology fusion together in a platform that gives you the possibility of exploring your imagination through PixelArt squlpture, you also compete and socialize with other creative people.',
+      es: 'En este juego el Arte y la tecnología se fusionan en una plataforma que le da al usuario la posibilidad de explorar su imaginación mediante la escultura Pixel Art, además de competir e interactuar como nunca se ha hecho.',
+    },
+  },
+  {
+    id: 'fastcrush',
+    name: 'Fastcrush',
+    poster: '/posters/fastcrush.jpg',
+    mainImage: '/fastcrush/main.png',
+    logo: '/fastcrush/logo.png',
+    link: '/games/fastcrush',
+    bg: '/fastcrush/bg.png',
+    description: {
+      en: 'Fast Crush is a casual strategy game in which the users have to complete the pairs of partners due to the level in a certain time. To reach this you need to sit the pairs according to their tastes and satisfy them with their wishes. This game was developed for Cubacitas.',
+      es: 'Fast Crush en un juego de estrategia casual en el cual los usuarios tienen como objetivo completar la cantidad de parejas, que exige el nivel, en un tiempo determinado. Para esto deben sentar a las parejas según sus gustos, y completarse las parejas satisfaciendo sus deseos. Este juego fue desarrollado para Cubacitas.',
+    },
+  },
+  {
+    id: 'campaign',
+    name: 'The Campaign',
+    poster: '/posters/Campaign.jpg',
+    mainImage: '/campaign/main.png',
+    logo: '/campaign/Avion.png',
+    link: '/games/campaign',
+    bg: '/campaign/bg.jpg',
+    description: {
+      en: `Mutant mosquitoes have escaped a research laboratory! These mosquitoes are quite smart, but up to no good. Upon breakout they invade a beautiful and quiet island in the Caribbean, which is also a tourist destination for many. Thus, the mutant mosquitos begin wreaking havoc as soon as they move in. All hope for a peaceful, mosquito-less future would be lost if not for a veteran pilot who knows just how to deal with them -- and it's not by calling pest control!`,
+      es: 'Mosquitos mutantes se escapan de un laboratorio y resulta ser que son inteligentes, por eso deciden ir a invadir una bella, tranquila y turística isla caribeña. Esos nuevos visitantes han provocado el caos y nada los puede detener, pero en la isla hay un piloto veterano que tiene bajo la manga algo para erradicarlos y no es fumigándolos. Este juego lo estamos desarrollando de forma colaborativa con el estudio canadiense Bech Bum Games.',
+    },
+  },
+]

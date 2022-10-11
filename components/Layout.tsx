@@ -18,7 +18,7 @@ const userNavigation = [
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <div className="min-h-full">
+      <div className="min-h-full bg-white">
         <Navbar />
 
         <main>
