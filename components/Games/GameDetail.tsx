@@ -27,13 +27,13 @@ export default function GameDetail({
             <div className="absolute inset-0">
               <img
                 className="h-full w-full object-cover"
-                src={`${window.origin}/assets/games${bg}`}
+                src={`/assets/games${bg}`}
                 alt="People working on laptops"
               />
             </div>
             <div className="flex relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 text-center justify-center justify-items-center">
               <div className="self-center">
-                <img src={`${window.origin}/assets/games${logo}`} />
+                <img src={`/assets/games${logo}`} />
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function GameDetail({
             <div className="pr-4 sm:pr-6 lg:relative lg:m-0 lg:h-full lg:px-0">
               <img
                 className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={`${window.origin}/assets/games${mainImage}`}
+                src={`/assets/games${mainImage}`}
                 alt="Customer profile user interface"
               />
             </div>
