@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+import ContactUsButton from '../ContactUsButton'
 
 export default function Heading() {
   const { t } = useTranslation('common')
@@ -27,14 +28,7 @@ export default function Heading() {
           {t('heading.entertainment')}
         </h1>
         <p className="mt-6 max-w-3xl text-lg text-white">{t('heading.sub')}</p>
-        <div className="mt-10">
-          <a
-            href="mailto:teamconwiro@gmail.com"
-            className="inline-flex rounded-md border border-transparent bg-primary px-4 py-2 text-xl font-medium text-white shadow-2xl hover:bg-gray-700"
-          >
-            {t('contact')}
-          </a>
-        </div>
+        <ContactUsButton />
       </div>
     </div>
   )

@@ -201,26 +201,132 @@ export const GAMES = [
   {
     id: 'lapira',
     name: 'La Pira',
-    poster: '/posters/LaPira.png',
-    mainImage: '/lapira/lapira-carro.png',
-    logo: '/lapira/la-pira.png',
+    poster: '/posters/lapira.png',
     link: '/games/lapira',
-    bg: '/lapira/lapira-bg.png',
-    gallery: [
-      '/lapira/lapira01.png',
-      '/lapira/lapira02.png',
-      '/lapira/lapira03.png',
-      '/lapira/lapira04.png',
+    bg: '/lapira/bg.jpg',
+    sections: [
+      {
+        imagePosition: 'left',
+        image: '/lapira/img1.png',
+        description: {
+          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+        },
+        bgColor: 'bg-white',
+        textColor: 'text-black',
+        bgImage: '',
+      },
+      {
+        imagePosition: 'right',
+        image: '/lapira/img2.png',
+        description: {
+          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+        },
+        bgColor: 'bg-white',
+        textColor: 'text-white',
+        bgImage: '/lapira/bg2.png',
+      },
     ],
-    description: {
-      en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
-      es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+    gallery: {
+      items: [
+        '/lapira/gallery1.png',
+        '/lapira/gallery2.png',
+        '/lapira/gallery3.png',
+        '/lapira/gallery4.png',
+        '/lapira/gallery5.png',
+        '/lapira/gallery6.png',
+        '/lapira/gallery7.png',
+        '/lapira/gallery8.png',
+      ],
+      bgColor: '',
+      bgImage: '',
     },
   },
   {
     id: 'xtellar',
     name: 'X-Tellar',
-    poster: '/posters/Xtellar.jpg',
+    poster: '/posters/xtellar.png',
+    link: '/games/xtellar',
+    bg: '/xtellar/bg.png',
+    sections: [
+      {
+        imagePosition: 'left',
+        image: '/xtellar/img1.png',
+        description: {
+          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+        },
+        bgColor: 'bg-white',
+        textColor: 'text-black',
+        bgImage: '',
+      },
+    ],
+    gallery: {
+      items: [
+        '/xtellar/gallery1.png',
+        '/xtellar/gallery2.png',
+        '/xtellar/gallery3.png',
+        '/xtellar/gallery4.png',
+        '/xtellar/gallery5.png',
+        '/xtellar/gallery6.png',
+      ],
+      bgColor: 'bg-footer',
+      bgImage: '',
+    },
+  },
+  {
+    id: 'terrabot',
+    name: 'Terrabot',
+    poster: '/posters/terrabot.png',
+    link: '/games/terrabot',
+    bg: '/terrabot/bg.jpg',
+    sections: [
+      {
+        imagePosition: 'left',
+        image: '/terrabot/img1.png',
+        description: {
+          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+        },
+        bgColor: 'bg-white',
+        textColor: 'text-black',
+        bgImage: '',
+      },
+      {
+        imagePosition: 'right',
+        image: '/terrabot/img2.png',
+        description: {
+          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+        },
+        bgColor: 'bg-white',
+        textColor: 'text-white',
+        bgImage: '/terrabot/bg3.png',
+      },
+    ],
+    gallery: {
+      items: [
+        '/terrabot/gallery1.jpg',
+        '/terrabot/gallery2.jpg',
+        '/terrabot/gallery3.jpg',
+        '/terrabot/gallery4.jpg',
+        '/terrabot/gallery5.jpg',
+      ],
+      bgColor: '',
+      bgImage: '/terrabot/bg2.png',
+    },
+  },
+  {
+    id: 'paketown',
+    name: 'Paketown',
+    poster: '/posters/paketown.png',
+    link: 'https://paketown.net/',
+  },
+  /*{
+    id: 'xtellar',
+    name: 'X-Tellar',
+    poster: '/posters/xtellar.png',
     mainImage: '/xtellar/xtellar-conwiro-poster.png',
     logo: '/xtellar/x-tellar.png',
     link: '/games/xtellar',
@@ -235,5 +341,5 @@ export const GAMES = [
       en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
       es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
     },
-  },
+  },*/
 ]
