@@ -6,7 +6,7 @@ export default function GamesGrid() {
   const { t } = useTranslation('common')
 
   return (
-    <div className="bg-black py-40">
+    <div className="bg-black py-40 z-10 relative">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="text-center">
           <p className="mt-1 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-md">
