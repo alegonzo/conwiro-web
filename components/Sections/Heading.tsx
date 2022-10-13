@@ -15,6 +15,7 @@ export default function Heading() {
           width="100%"
           height="100%"
           volume={0}
+          playsinline
           config={{
             youtube: {
               playerVars: { showinfo: 0, controls: 0 },
