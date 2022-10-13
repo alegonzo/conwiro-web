@@ -9,7 +9,7 @@ type GameItemProps = {
 const GameItem = ({ id, poster, link }: GameItemProps) => {
   return (
     <div key={id} className="group relative">
-      <div className="min-h-100 w-full overflow-hidden bg-gray-200 rounded-lg group-hover:shadow-xl group-hover:shadow-primary lg:aspect-none lg:h-100">
+      <div className="min-h-100 w-full overflow-hidden bg-gray-200 rounded-2xl group-hover:shadow-xl group-hover:shadow-primary lg:aspect-none lg:h-100">
         <Link href={link}>
           <a>
             <img
