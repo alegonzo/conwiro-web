@@ -7,24 +7,17 @@ export default function Heading() {
   const { t } = useTranslation('common')
 
   return (
-    <div id="home" className="relative bg-white py-32">
+    <div id="home" className="relative bg-black h-screen">
       <div className="absolute inset-0 overflow-hidden">
-        {/*<img
-          className="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-          alt=""
-  />*/}
         <ReactPlayer
+          className="video-background"
           url="https://youtu.be/YwUXyFN2BiI"
           width="100%"
           height="100%"
-          style={{
-            objectFit: 'cover',
-          }}
           volume={0}
           config={{
             youtube: {
-              playerVars: { showinfo: 0, controls: 0, height: 500 },
+              playerVars: { showinfo: 0, controls: 0 },
             },
           }}
           playing={true}
