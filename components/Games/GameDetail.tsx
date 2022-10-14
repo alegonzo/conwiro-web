@@ -4,19 +4,21 @@ import ContactUsButton from '../ContactUsButton'
 import { Carousel } from 'react-responsive-carousel'
 import { useResponsive } from 'ahooks'
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
 type GameDetailProps = {
   id: string
-  bg?: string
-  bgColor?: string
+  bg: string
   gallery: Gallery
   sections: Section[]
 }
 
 type Gallery = {
   items: string[]
-  bgColor?: string
+  bgColor: string
   bgImage: string
+  video: string
 }
 
 type Section = {
@@ -29,8 +31,8 @@ type Section = {
 }
 
 type Description = {
-  en: string
-  es: string
+  en: string | string[]
+  es: string | string[]
 }
 
 export default function GameDetail({
@@ -52,6 +54,39 @@ export default function GameDetail({
       : true
     setPercent(isSmall ? 100 : 33)
   }, [responsive])
+
+  const renderDescription = (section: Section, lang: string) => {
+    if (
+      Array.isArray(section.description.en) &&
+      Array.isArray(section.description.es)
+    ) {
+      return (
+        <ul>
+          {lang === 'en'
+            ? section.description.en.map((item) => (
+                <li>
+                  <p className={clsx('mt-4 text-lg', section.textColor)}>
+                    {item}
+                  </p>
+                </li>
+              ))
+            : section.description.es.map((item: string) => (
+                <li>
+                  <p className={clsx('mt-4 text-lg', section.textColor)}>
+                    {item}
+                  </p>
+                </li>
+              ))}
+        </ul>
+      )
+    }
+
+    return (
+      <p className={clsx('mt-4 text-lg', section.textColor)}>
+        {lang === 'en' ? section.description.en : section.description.es}
+      </p>
+    )
+  }
 
   return (
     <div className="bg-white">
@@ -171,7 +206,7 @@ export default function GameDetail({
               />
             </div>
           )}
-          <div className="flex relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 text-center justify-center justify-items-center">
+          <div className="flex flex-col space-y-24 relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 text-center justify-center justify-items-center">
             <Carousel
               showArrows={true}
               showStatus={false}
@@ -189,6 +224,21 @@ export default function GameDetail({
               ))}
             </Carousel>
           </div>
+          <ReactPlayer
+            url={gallery.video}
+            width="100%"
+            height={500}
+            volume={0}
+            playsinline
+            config={{
+              youtube: {
+                playerVars: { showinfo: 0, controls: 1 },
+              },
+            }}
+            playing={true}
+            muted={true}
+            loop={true}
+          />
         </div>
       </div>
     </div>

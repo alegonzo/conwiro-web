@@ -220,8 +220,8 @@ export const GAMES = [
         imagePosition: 'right',
         image: '/lapira/img2.png',
         description: {
-          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
-          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+          en: 'But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
+          es: 'Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
         },
         bgColor: 'bg-white',
         textColor: 'text-white',
@@ -241,6 +241,7 @@ export const GAMES = [
       ],
       bgColor: '',
       bgImage: '',
+      video: 'https://www.youtube.com/watch?v=fu8E6V30F1c',
     },
   },
   {
@@ -254,8 +255,8 @@ export const GAMES = [
         imagePosition: 'left',
         image: '/xtellar/img1.png',
         description: {
-          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
-          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+          en: 'Fight to survive, then conquer! With a minimalist, yet elegant design, X-Tellar is a space-themed (and musical) game to transport you to another galaxy. Defeat the invaders while collecting maximum points, putting you on your way to becoming a space overlord!',
+          es: 'Lucha por sobrevivir o por a conquistar X-Tellar. Juego minimalista que garantiza una gran diversión y euforia al jugar. El objetivo es sobrevivir la mayor cantidad de tiempo y obtener la mejor puntuación posible para conquistar X-Tellar',
         },
         bgColor: 'bg-white',
         textColor: 'text-black',
@@ -273,6 +274,7 @@ export const GAMES = [
       ],
       bgColor: 'bg-footer',
       bgImage: '',
+      video: 'https://www.youtube.com/watch?v=7S8l_9gt7bQ',
     },
   },
   {
@@ -293,17 +295,35 @@ export const GAMES = [
         textColor: 'text-black',
         bgImage: '',
       },
-      {
+      /*{
         imagePosition: 'right',
         image: '/terrabot/img2.png',
         description: {
-          en: 'La Pira is a story of a peasant from mountains, who is tired to live in the village and one day decides to recollect all his belongings, pack them in the car and move (Pira) for the city to find new adventures. But it turns to be not so easy as on the way he is going to meet different imaginable obstacles trying to stop him on the way and, moreover, in the same time he needs to find the fuel to be able to continue his journey.',
-          es: 'La Pira es la historia de un guajiro de monte adentro, que un día se cansa de vivir en el campo y decide recoger todas sus pertenecías las monta en un carro y se va (se Pira) para la ciudad a buscar nuevas aventuras. Pero no resulta tan fácil su plan ya que su camino se va a encontrar distintos obstáculos imaginables que le van a tratar de impedir llegar a su destino, si eso no es suficiente, al mismo tiempo tiene la necesidad de conseguir combustible para poder continuar su camino.',
+          en: [
+            '-Online strategy',
+            '-PvP battles',
+            '-Construction of structures',
+            '-Deployment of defenses',
+            '-Attack other users',
+            '-Increase your robotic forces',
+            '-Upgrade your tech to go further',
+            '-Take revenge on those who dare to attack you',
+          ],
+          es: [
+            '-Estrategia en línea',
+            '-Batallas PvP',
+            '-Construcción de estructuras',
+            '-Despliegue de defensas',
+            '-Atacar a otros usuarios',
+            '-Aumenta tus fuerzas robóticas',
+            '-Actualiza tu tecnología para llegar más lejos',
+            '-Véngate de aquellos que se atrevan a atacarte',
+          ],
         },
         bgColor: 'bg-white',
         textColor: 'text-white',
         bgImage: '/terrabot/bg3.png',
-      },
+      },*/
     ],
     gallery: {
       items: [
@@ -315,6 +335,7 @@ export const GAMES = [
       ],
       bgColor: '',
       bgImage: '/terrabot/bg2.png',
+      video: 'https://www.youtube.com/watch?v=b54mzt3eqVU&t=2s',
     },
   },
   {
@@ -322,6 +343,14 @@ export const GAMES = [
     name: 'Paketown',
     poster: '/posters/paketown.png',
     link: 'https://paketown.net/',
+    bg: '',
+    sections: [],
+    gallery: {
+      items: [],
+      video: '',
+      bgColor: '',
+      bgImage: '',
+    },
   },
   /*{
     id: 'xtellar',

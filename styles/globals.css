@@ -22,10 +22,6 @@ body {
   @apply left-0;
   @apply object-cover;
 }
-.react-player > iframe {
-  position: absolute;
-  object-fit: fill;
-}
 
 .video-background {
   position: relative;

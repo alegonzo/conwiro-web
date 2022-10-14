@@ -65,7 +65,7 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pt-2 pb-3">
               {ROUTES.map((item) => (
-                <Link key={item.name} href={item.href}>
+                <Link key={item.name} href={item.href} passHref={true}>
                   <Disclosure.Button
                     as="a"
                     className={clsx(
