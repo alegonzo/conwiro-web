@@ -4,11 +4,13 @@ import GameDetail from '../../components/Games/GameDetail'
 import useTranslation from 'next-translate/useTranslation'
 import { GetStaticPropsContext } from 'next'
 
-export default function GamePage({ game }) {
+export default function GamePage() {
   const router = useRouter()
   const { lang } = useTranslation('common')
   const { id } = router.query
-  //const game = GAMES.find((item) => item.id === id)
+  const game = GAMES.find((item) => item.id === id)
+
+  if (!game) return <p>Not found</p>
 
   return (
     <div className="bg-white">
@@ -22,23 +24,4 @@ export default function GamePage({ game }) {
       )}
     </div>
   )
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [
-      ...GAMES.map((item) => ({ params: { id: item.id }, locale: 'en' })),
-      ...GAMES.map((item) => ({ params: { id: item.id } })),
-    ],
-    fallback: false,
-  }
-}
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-  const { id } = context.params
-  return {
-    props: {
-      game: GAMES.find((item) => item.id === id),
-    },
-  }
 }
